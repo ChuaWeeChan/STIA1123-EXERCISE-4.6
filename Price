@@ -1,0 +1,12 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public interface Price {
+    
+    double totalPrice(int quantity);
+    double totalPrice(int quantity, double disc);
+    
+}
