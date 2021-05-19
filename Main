@@ -1,0 +1,31 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public class Main {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Apple objApple= new Apple("Apple",3,55); //(name,price,quantity)
+	System.out.println(objApple);
+        
+        RedApple objRedApple= new RedApple("Red Apple",3,55,30.5); //(name,price,quantity,weight)
+	System.out.println(objRedApple);
+		
+	GreenApple objGreenApple= new GreenApple("Green Apple",1,4,20.5,"Green"); //(name,price,quantity,weight,colour)
+	System.out.println(objGreenApple);
+		
+	Banana objBanana= new Banana("Banana",4.5,60,55,"Yellow",'A'); //(name,price,quantity,weight,colour，vitamin)
+	System.out.println(objBanana);
+        
+	Blueberries objBlueberries= new Blueberries("Blueberries",10.9,40,99,"Purple",'A',"North Europe"); //(name,price,quantity,weight,colour，vitamin,origin)
+	System.out.println(objBlueberries);
+        
+        
+    }
+    
+}
