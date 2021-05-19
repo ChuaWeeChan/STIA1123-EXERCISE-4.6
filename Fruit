@@ -1,0 +1,30 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public abstract class Fruit {
+    protected String name;
+    
+    public Fruit(){ //constructor with no argument
+    name=null;
+    }
+    
+    public Fruit(String n) { //constructor with argument
+    name = n;
+    System.out.println("\n***********************************");
+    System.out.println(n+" constructor is invoked");
+    System.out.println("***********************************");
+    }
+    
+    public String getName(){
+        return name;
+    }
+    
+    public String toString() { //overriding method
+	return "Fruits\t\t: "+name;
+    }
+
+  
+}
