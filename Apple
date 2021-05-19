@@ -1,0 +1,45 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public class Apple extends Fruit{
+    protected double price;
+    protected int quantity;
+    
+    public Apple(String n, double p, int q){ //constructor sub class with 3 argument
+        super(n);
+        price = p;
+        quantity = q;
+        
+        if (quantity <= 10){
+            System.out.println("Total price for quantity less than 10 : RM "+p*q);
+        }
+        else if ((quantity > 10) && (quantity <=50)){
+            Price atp = new AppleTotalPrice();
+            double totalPrice = atp.totalPrice(q);
+            System.out.println("Total price for quantity less than 50 : RM "+totalPrice);
+        }
+        else {
+            double disc;
+            double pp = 2;
+            Discount aa = new AppleDiscount();
+            disc = aa.rateOfDiscount();
+            
+            Price atp2 = new AppleTotalPrice();
+            double totalPrice = atp2.totalPrice(q, disc);
+            double totalDiscount=((quantity*pp)*disc);
+            System.out.println("Total price for quantity more than 50 : RM "+totalPrice); 
+            System.out.println("Total discount for quantity more than 50 : RM" + totalDiscount);
+        }
+    }
+    
+    public String toString(){ //overriding method
+        return super.toString()
+
+                +"\nQuantity\t: "+quantity+"units";
+
+    }
+
+}
