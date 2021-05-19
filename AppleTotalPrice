@@ -1,0 +1,56 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+class AppleTotalPrice implements Price{
+    
+	// overloading with 1 parameter
+	public double totalPrice(int quantity) {
+            double pp = 2.5;
+            double totalPrice = pp*quantity;
+		return totalPrice;
+	}
+	
+	// overloading with 2 parameter
+	public double totalPrice(int quantity, double disc) {
+            double pp = 2;
+            double totalPrice = (pp*quantity)-((pp*quantity)*disc);
+		return totalPrice;
+	}
+}
+
+class BananaTotalPrice implements Price{
+    
+	// overloading with 1 parameter
+	public double totalPrice(int quantity) {
+            double pp = 4;
+            double totalPrice = pp*quantity;
+		return totalPrice;
+	}
+	
+	// overloading with 2 parameter
+	public double totalPrice(int quantity, double disc) {
+            double pp = 3.5;
+            double totalPrice = (pp*quantity)-((pp*quantity)*disc);
+		return totalPrice;
+	}
+}
+
+class BlueberriesTotalPrice implements Price{
+    
+	// overloading with 1 parameter
+	public double totalPrice(int quantity) {
+            double pp = 9.5;
+            double totalPrice = pp*quantity;
+		return totalPrice;
+	}
+	
+	// overloading with 2 parameter
+	public double totalPrice(int quantity, double disc) {
+            double pp = 9;
+            double totalPrice = (pp*quantity)-((pp*quantity)*disc);
+		return totalPrice;
+	}
+}
