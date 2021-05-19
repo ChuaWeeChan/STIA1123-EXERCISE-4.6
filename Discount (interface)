@@ -1,0 +1,11 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public interface Discount {
+    
+    double rateOfDiscount();
+    
+}
