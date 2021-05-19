@@ -1,0 +1,77 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public class Banana extends Fruit{
+    protected int quantity;
+    protected double price,weight;
+    protected String colour;
+    protected char vitamin;
+    
+    
+    public Banana(String n,double p,int q, double w, String c, char v){ //constructor sub class with 3 argument
+         super(n);
+        price = p;
+        quantity = q;
+        weight = w;
+        colour = c;
+        vitamin = v;
+        
+        if (quantity <= 10){
+            System.out.println("Total price for quantity less than 10 : RM "+p*q);
+        }
+        else if ((quantity > 10) && (quantity <=50)){
+            Price btp = new BananaTotalPrice();
+            double totalPrice = btp.totalPrice(q);
+            System.out.println("Total price for quantity less than 50 : RM "+totalPrice);
+        }
+        else {
+            double disc;
+            double pp = 3.5;
+            Discount baba = new BananaDiscount();
+            disc = baba.rateOfDiscount();
+            
+            Price btp2 = new BananaTotalPrice();
+            double totalPrice = btp2.totalPrice(q, disc);
+            double totalDiscount=((quantity*pp)*disc);
+            System.out.println("Total price for quantity more than 50 : RM "+totalPrice); 
+            System.out.println("Total discount for quantity more than 50 : RM" + totalDiscount);
+        }
+    }
+    
+    public double Price(){
+        return price;
+    }
+    
+    public int Quantity(){
+        return quantity;
+    }
+    
+    public double Weight(){
+        return weight;
+    }
+    
+    public String Colour(){
+        return colour;
+    }
+    
+    public char Vitamin(){
+        return vitamin;
+    }
+    
+    public double totalWeight(){
+        double totalWeight = (quantity*weight);
+        return totalWeight;
+    }
+    
+    public String toString(){ //overriding method
+        return super.toString()
+                +"\nQuantity\t: "+quantity+"units"
+                +"\nTotal Weight\t："+totalWeight()+"gm."
+                +"\nColour\t\t: "+Colour()
+                +"\nVitamin\t\t: Vitamin "+Vitamin();
+    }
+
+}
