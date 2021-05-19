@@ -1,0 +1,38 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public class GreenApple extends Apple {
+    protected double weight;
+    protected String colour;
+    
+    public GreenApple(String n, double p, int q, double w, String c){
+        super(n,p,q);
+        weight = w;
+        colour = c;
+        
+    }
+    
+    public double Weight(){
+        return weight;
+    }
+    
+    public String Colour(){
+        return colour;
+    }
+    
+    public double totalWeight(){
+        double totalWeight = (super.quantity*weight);
+        return totalWeight;
+    }
+    
+    public String toString(){ //overriding method
+        return super.toString()
+                +"\nTotal Weight\t: "+totalWeight()+"gm"
+                +"\nColour\t\t: "+Colour();
+    }
+    
+}
+     
