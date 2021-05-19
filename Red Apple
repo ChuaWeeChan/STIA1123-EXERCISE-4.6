@@ -1,0 +1,29 @@
+package AbstractAndInterface;
+
+/**
+ *
+ * @author CHUA WEE CHAN 271948
+ */
+public class RedApple extends Apple {
+    protected double weight;
+    
+    public RedApple(String n, double p, int q, double w){
+        super(n,p,q);
+        weight=w;
+    }
+    
+    public double Weight(){
+        return weight;
+    }
+    
+    public double totalWeight(){
+        double totalWeight = (super.quantity*weight);
+        return totalWeight;
+    }
+    
+    public String toString(){ //overriding method
+        return super.toString()
+                +"\nTotal Weight\t: "+totalWeight()+"gm";
+    }
+
+}
